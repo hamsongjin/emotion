@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이디/비밀번호 찾기</title>
+
+    <link rel="stylesheet" href="./css/dist/common.css">
+   
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+   
+    
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js"></script>
+
+    <!-- xeicon -->
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+</head>
+<body>
+    <div class="container mem_find">
+        <div class="sj_container">
+            <header>
+                <div class="sj_back"><img src="./img/icon/angle-left.png" alt=""></div>
+                <p class="sj_title">아이디/비밀번호 찾기</p>
+            </header>
+            <div class="sj_con">
+                <ul class="tab_wrap">
+                    <li class="tab_btn on">아이디 찾기</li>
+                    <li class="tab_btn">비밀번호 찾기</li>
+                </ul>
+                <div class="tab_con active">
+                    <form action="#">
+                        <!-- name -->
+                        <label class="con_title" for="">이름</label>
+                        <input id="u_name" type="text" placeholder="이름">
+                        <div id="name_msg" class="error_message err_msg">
+                            <strong>올바른 이름</strong>으로 입력해 주세요.
+                        </div>
+                        <!-- phon -->
+                        <label class="con_title" for="">휴대폰 번호</label>
+                        <input id="u_tel" type="tel" name="" placeholder="휴대폰 번호">
+                        <div id="tel_msg" class="error_message err_msg">
+                            <strong>올바른 전화번호 형식</strong>으로 입력해 주세요.
+                        </div>
+
+                        <input class="sj_btn" type="submit" value="아이디 찾기">
+                    </form>
+                    
+                </div>
+                <div class="tab_con">
+                    <form action="#">
+                         <!-- id -->
+                    <label class="con_title" for="">아이디(이메일)</label>
+                    <input id="u_id" type="email" name=""  placeholder="아이디">
+                    <div id="idMsg" class="error_message" >
+                        <strong>올바른 이메일 형식</strong>으로 입력해 주세요.
+                    </div>
+                        <!-- name -->
+                        <label class="con_title" for="">이름</label>
+                        <input id="u_name" type="text" placeholder="이름">
+                        <div id="name_msg" class="error_message err_msg">
+                            <strong>올바른 이름</strong>으로 입력해 주세요.
+                        </div>
+                        <!-- phon -->
+                        <label class="con_title" for="">휴대폰 번호</label>
+                        <input id="u_tel" type="tel" name="" placeholder="휴대폰 번호">
+                        <div id="tel_msg" class="error_message err_msg">
+                            <strong>올바른 전화번호 형식</strong>으로 입력해 주세요.
+                        </div>
+
+                        <input class="sj_btn" type="submit" value="비밀번호 찾기">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/mem_find.js"></script>
+</body>

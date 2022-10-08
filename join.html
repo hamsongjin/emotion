@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+
+    <link rel="stylesheet" href="./css/dist/common.css">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container join">
+        <div class="sj_container">
+            <header>
+                <div class="sj_back"><img src="./img/icon/angle-left.png" alt=""></div>
+                <p class="sj_title">회원가입</p>
+            </header>
+            <div class="sj_con">
+                <form action="#">
+                   
+                    <!-- id -->
+                    <label class="con_title" for="">아이디(이메일)</label>
+                    <input id="u_id" type="email" name=""  placeholder="아이디">
+                    <div id="idMsg" class="error_message" >
+                        <strong>올바른 이메일 형식</strong>으로 입력해 주세요.
+                    </div>
+                    <div id="idMsg2" class="error_message">
+                        <strong>이미 사용중</strong>인 아이디입니다
+                    </div>
+                    <!-- pw -->
+                    <label class="con_title" for="">비밀번호</label>
+                    <input id="u_pw" type="password" name=""  placeholder="비밀번호"  onkeyup="checkCapsLock(event)">
+                    <div id="pwMsg1" class="error_message">
+                        <strong>영문, 숫자, 특수문자</strong> 포함 8글자 이상 20글자 이하로 입력해주세요.
+                    </div>
+                    <div id="pwCaps1" class="caps_message">
+                        <strong>Caps Lock</strong>이 켜져 있습니다.
+                    </div>
+                    <!-- pw2 -->
+                    <label class="con_title" for="">비밀번호 확인</label>
+                    <input id="u_pw2" type="password" name=""  placeholder="비밀번호 확인">
+                    <div id="pwMsg2" class="error_message" >
+                        <strong>비밀번호</strong>가 일치하지 않습니다.
+                    </div>
+                    <div id="pwCaps2" class="caps_message">
+                        <strong>Caps Lock</strong>이 켜져 있습니다.
+                    </div>
+                    <!-- name -->
+                    <label class="con_title" for="">이름</label>
+                    <input id="u_name" type="text" placeholder="이름">
+                    <!-- phon -->
+                    <label class="con_title" for="">휴대폰 번호</label>
+                    <input id="u_tel" type="tel" name="" placeholder="휴대폰 번호">
+                    <div id="tel_msg" class="error_message">
+                        <strong>올바른 전화번호 형식</strong>으로 입력해 주세요.
+                    </div>
+                    <!-- birth -->
+                    <label class="con_title" for="">생년월일</label>
+                    <input id="u_birth" type="date" name="" placeholder="생년월일">
+                    <!-- gender -->
+                    <label class="con_title" for="">성별</label>
+                    <div class="mb-3">
+                        <input type="radio" name="u_gender" value="1"><label class="con_txt" for="u_gender">남성</label>
+                        <input type="radio" name="u_gender" value="2"><label class="con_txt" for="u_gender">여성</label>
+                    </div>
+                    <!-- areement -->
+                    <input type="checkbox" name="all_areement" id="all_areement"><label class="con_title" for="all_areement">모두 동의합니다</label>
+                    <div class="align-items-center">
+                        <span class="float-left">
+                            <input type="checkbox" name="areement1" id="areement1"><label class="con_txt" for="areement1">이용약관 동의</label>
+                        </span>
+                        <a href="">
+                        <span class="link_txt float-right">보기 > </span>
+                        </a>
+                        <div style="clear: both;"></div>
+                    </div>
+                
+                    <div class="align-items-center">
+                        <span class="float-left">
+                            <input type="checkbox" name="areement2" id="areement2"><label class="con_txt" for="areement2">개인정보 취급방침 동의</label>
+                        </span>
+                        <a href="">
+                        <span class="link_txt float-right">보기 > </span>
+                        </a>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <!-- <p id="sj_btn" class="sj_btn">회원가입</p> -->
+                    <input id="sj_btn" class="sj_btn" type="submit" value="회원가입">
+                </form>
+            </div>
+        </div>
+        
+    </div>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/common.js"></script>
+    
+
+    <!-- <script>
+        $(function() { 
+            allAreement();
+            allFalse();
+
+            $("#sj_btn").on("click", function() {
+                console.log(1);
+                let u_id = $("#u_id").val();
+                let u_pw = $("#u_pw").val();
+                let u_pw2 = $("#u_pw2").val();
+                let u_name = $("#u_name").val();
+                let u_tel = $("#u_tel").val();
+                let u_birth = $("#u_birth").val();
+                let u_gender = $("input:radio[name ='u_gender']:checked").val();
+                let u_areement1 = $("input:radio[name = 'areement1']:checked").val();
+                let u_areement2 = $("input:radio[name = 'areement2']:checked").val();
+
+                let obj = new Object(); 
+                obj.u_id = u_id;
+                obj.u_pw = u_pw;
+                obj.u_pw2 = u_pw2;
+                obj.u_name = u_name;
+                obj.u_tel = u_tel;
+                obj.u_birth = u_birth;
+                obj.u_gender = u_gender;
+                obj.u_areement1 = u_areement1;
+                obj.u_areement2 = u_areement2;
+
+                console.log("obj ?? " , obj);
+            });
+        });
+
+        //all areement
+
+        function allAreement() {
+                $('input[name="all_areement"]').on("change", function() {
+                    $('input:radio[name = "all_areement"]').prop("checked", false);
+                    $('input:radio[name = "all_areement"]').prop("checked", true);
+
+                    if($('input:radio[name="all_areement"]').is(':checked')) {
+                        // console.log("check on");
+                        $('input:radio[name = "areement1"]').prop("checked", true);
+                        $('input:radio[name = "areement2"]').prop("checked", true);
+                        $('input:radio[name="all_areement"]').toggleClass("all_false");
+                        $('label[for="all_areement"]').toggleClass("all_false");
+                    } 
+                });
+        }
+
+        function allFalse() {
+            $(".all_false").on("click", function() {
+                console.log("all false");
+                // $('input:radio[name = "all_areement"]').prop("checked", false);
+            }); 
+        }
+
+    </script> -->
+    
+     
+</body>
+</html>

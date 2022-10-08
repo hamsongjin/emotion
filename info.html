@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>감정, 보관소</title>
+
+    <link rel="stylesheet" href="./css/dist/common.css">
+    <link rel="stylesheet" href="./css/dist/info.css">
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+   
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js"></script>
+    
+</head>
+<body>
+   
+    <div class="sj_container">
+        <div class="container">
+            <header>
+                <div class="sj_back"><img src="./img/icon/angle-left.png" alt=""></div>
+                <p class="sj_title">마이페이지</p>
+                <div class="sj_set"><img src="./img/icon/pencil.png" alt=""></div>
+            </header>
+        </div>
+        <div class="sj_con">
+            <section class="sec1">
+                <div class="container">
+                    <p class="sj_name"><span id="sj_name">admin</span>  님</p>
+                    <p class="sj_email">admin@test.com</p>
+                </div>
+            </section>
+            <section class="sec2">
+                <div class="container">
+                    <form action="">
+                        <table>
+                            <colgroup>
+                                <col width="30%">
+                                <col width="auto">
+                            </colgroup>
+                            <tr>
+                                <th>이름</th>
+                                <td>
+                                    <input type="text" value="관리자" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>휴대폰 번호</th>
+                                <td>
+                                    <input type="tel" name="" id="" value="010-1111-1111" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>출생연도</th>
+                                <td>
+                                    <input type="date" name="" id="" value="1994-12-08" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>성별</th>
+                                <td>
+                                    <input type="text" value="여">
+                                </td>
+                            </tr>
+                        </table>
+                        <div id="sj_leave" class="sj_leave">
+                            탈퇴하기
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+</body>

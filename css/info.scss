@@ -1,0 +1,47 @@
+
+@import "common";
+
+
+.sj_container header .sj_set {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+}
+
+.sj_container header .sj_set img {width: 20px;}
+.sj_con .sec1 {
+    padding: 28px 0px;
+    background-color: $main_color;
+    color:#fff;
+}
+
+.sj_con .sj_name {
+    font-size: 28px;
+    font-weight: 500;
+}
+.sj_con .sj_email {
+    font-size: 18px;
+}
+.sj_con .sec2 table {
+    width: 100%;
+    border-spacing: 0;
+    font-size: 18px;
+}
+.sj_con .sec2 table tr th, .sj_con .sec2 table tr td {
+    padding: 20px 0;
+}
+.sj_con .sec2 table tr th {
+    font-weight: normal;
+}
+input[type=text], input[type=email], input[type=password], input[type=tel], input[type=date] {
+    text-align: right;
+    border: 0;
+    margin: 0!important;
+    padding: 0;
+}
+.sj_leave {
+    position:fixed;
+    bottom: 15px;
+    right:  15px;
+}

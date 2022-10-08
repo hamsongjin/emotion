@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'Hi Melody';
+    src: url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+}
+@font-face {
+    font-family:'Noto Sans KR';
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+    font-weight: 300;
+}
+@font-face {
+    font-family:'Noto Sans KR';
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap');
+    font-weight: 400;
+}
+@font-face {
+    font-family:'Noto Sans KR';
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+    font-weight: 500;
+}
+@font-face {
+    font-family:'Noto Sans KR';
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
+    font-weight: 700;
+}
+@font-face {
+    font-family:'Noto Sans KR';
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap');
+    font-weight: 900;
+}
+$main_color : #f3cb27;
+$sub_color: #ff6633;
+$bg_color: #f7f7f7;
+$font_color: #424242;
+$font_family1: 'Hi Melody';
+$font_family2: 'Noto Sans KR';
+$err_msg:  #ff0000;
+
+.main_color {
+    color: $main_color;
+}
+.sub_color {
+    color: $sub_color;
+}
+.bg_color {
+    color: $bg_color
+}
+.font_color {
+    color: $font_color;
+}
+.err_msg {
+    color: $err_msg;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+ body {
+    font-family: $font_family2;
+    height: 100vh;
+    color: $font_color;
+}
+.sj_container  p {
+    margin-bottom: 0;
+}
+a { 
+    color: #424242!important; 
+    text-decoration: none;
+    &:hover {
+        color:#424242!important;
+    }
+    &:active {
+        color:#424242!important;
+        text-decoration: none!important;}
+
+}
+
+input {
+    &[type="text"],&[type="email"],&[type="password"], &[type="tel"],[type="date"] {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px !important;
+        padding: 12px 15px;
+        border: 0;
+        border-bottom: 1px solid #ddd;
+        box-sizing : border-box;
+    }
+    &[type='radio'] {
+        // accent-color: $sub_color;
+        background: $sub_color;
+       
+    }
+    &::placeholder {
+        color: #ddd;
+    }
+}
+.sj_container header {
+    padding: 18px 0 13px;
+
+    position: relative;
+    .sj_back {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+    }
+    .sj_back img {
+        width: 15px;
+    }
+}
+
+.sj_container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    // overflow: hidden;
+    padding-bottom: 15px;
+    height: 100vh;
+
+    position: relative;
+}
+
+.sj_title {
+    font-size: 25px;
+    font-family: $font_family1;
+    text-align: center;
+}
+.sj_btn {
+    width: 100%;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: $sub_color;
+    color: #fff;
+    margin-top: 50px;
+    border: 2px solid transparent;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    text-align: center;
+    &:hover {
+        border: 2px solid $sub_color;
+        background-color: #fff;
+        color: $sub_color;
+    }
+}
+.link_txt {
+    display: inline-block;
+    font-size: 14px;
+    color: $font_color;
+    margin-top: 10px;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.con_txt {
+    font-size: 14px;
+}
+
+// login
+.container.login {
+    padding: 0;
+    .sj_container {
+        background-color: $main_color;
+        .sec1 {
+            padding: 100px 0 56px;
+            .log_img {
+                text-align: center;
+            }
+            .sj_title {
+                font-size: 38px;
+            }
+        }
+        
+        .sec2 {
+            background-color: #fff;
+            padding: 50px 30px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            form {
+                // text-align: center;
+
+                .login_error_wrap {
+                    padding: 20px 0;
+                    color: $err_msg;
+                }
+                .sj_btn {
+                    margin-bottom: 15px;
+                }
+            }
+            
+        }
+
+    }
+}
+
+// join
+.container.join {
+    height: 100vh;
+    overflow: scroll;
+    .sj_con {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    input[type="text"],input[type="email"], input[type="password"] , input[type="tel"], input[type="date"]  {
+        padding: 12px 0;
+    }
+    input[type='radio'] {
+        margin-top: 15px;
+        margin-right: 5px;
+    }
+    .sj_title {
+        margin-bottom: 0;
+    }
+    .error_message {
+        color: $err_msg;
+        margin-bottom: 10px;
+    }
+}
+
+// idFind 
+.container.mem_find {
+    .sj_con {
+        .tab_wrap {
+            display: flex;
+            width: 100%;
+            list-style: none;
+            .tab_btn {
+                display: inline-block;
+                width: 50%;
+                padding: 10px 15px;
+                font-weight: bold;
+                text-align: center;
+                border-bottom: 2px solid #ddd;
+                &.on {
+                    color: $sub_color;
+                    border-color: $sub_color;
+                }
+            }
+           
+        }
+        .tab_con {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+    }
+}

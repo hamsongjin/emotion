@@ -1,0 +1,196 @@
+.sj_container header .sj_menu {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -80%);
+}
+
+.sj_btn {
+  display: inline-block;
+  width: 65px;
+  height: 28px;
+  text-align: center;
+  background-color: #ff6633;
+  color: #fff;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+}
+
+.sj_con .sj_title {
+  text-align: left;
+  font-size: 27px;
+  margin-bottom: 0px;
+}
+
+.sj_con .sj_week {
+  padding: 12px 10px 25px;
+  background: #f3cb27;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.sj_con .sj_week .sj_title {
+  color: #fff;
+}
+
+.sj_items {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.sj_items .item {
+  display: inline-block;
+  text-align: center;
+  width: calc(99% / 7 - 7px);
+  border-radius: 5px;
+  background-color: #fff;
+  color: #424242;
+  text-align: center;
+  padding: 10px 0;
+  margin-right: 5px;
+  margin-bottom: 7px;
+  border: 0;
+  outline: 0;
+  position: relative;
+}
+
+.sj_items .item.sj_this {
+  background-color: #ff6633;
+  color: #fff;
+}
+
+.sj_items .item.sj_active::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.sj_items .item:last-child {
+  margin-right: 0;
+}
+
+.sj_items .item .item_date {
+  display: inline-block;
+  font-family: "Hi Melody";
+  font-size: 30px;
+  margin-bottom: 3px;
+}
+
+.sj_items .item .item_day {
+  font-family: "Hi Melody";
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 425px) {
+  .sj_items .item {
+    width: calc(98% / 7 - 7px);
+  }
+
+  .sj_items .item .item_date {
+    margin-bottom: 0px;
+  }
+}
+.sj_record {
+  padding: 12px 10px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  height: 200px;
+  position: relative;
+}
+
+.sj_record .menu_dots {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+}
+
+.sj_record .sj_date {
+  font-family: "Hi Melody";
+  font-size: 27px;
+  margin-bottom: 0;
+}
+
+.sj_record input[type=textarea] {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+}
+
+.sj_record input[type=textarea]::placeholder {
+  color: #999;
+}
+
+.sj_main_menu_bg {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.sj_main_menu {
+  width: 70%;
+  height: 100vh;
+  background-color: #fff;
+  padding: 90px 15px 0;
+  position: relative;
+}
+
+.sj_main_menu .close_btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.sj_main_menu .sj_profile_wrap {
+  text-align: center;
+}
+
+.sj_main_menu .sj_profile {
+  display: inline-block;
+  width: 95px;
+  height: 95px;
+  background-color: #ebebeb;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.sj_main_menu .sj_profile img {
+  margin-top: 20px;
+}
+
+.sj_main_menu .sj_name {
+  font-family: "Hi Melody";
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.sj_main_menu .sj_txt {
+  font-family: "Hi Melody";
+  margin-bottom: 5px;
+}
+
+.sj_main_menu .sj_txt img {
+  width: 15px;
+  margin-right: 10px;
+}

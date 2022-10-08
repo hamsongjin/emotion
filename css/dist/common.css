@@ -1,0 +1,229 @@
+@font-face {
+  font-family: "Hi Melody";
+  src: url("https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap");
+  font-weight: 900;
+}
+.main_color {
+  color: #f3cb27;
+}
+
+.sub_color {
+  color: #ff6633;
+}
+
+.bg_color {
+  color: #f7f7f7;
+}
+
+.font_color {
+  color: #424242;
+}
+
+.err_msg {
+  color: #ff0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans KR";
+  height: 100vh;
+  color: #424242;
+}
+
+.sj_container p {
+  margin-bottom: 0;
+}
+
+a {
+  color: #424242 !important;
+  text-decoration: none;
+}
+a:hover {
+  color: #424242 !important;
+}
+a:active {
+  color: #424242 !important;
+  text-decoration: none !important;
+}
+
+input[type=text], input[type=email], input[type=password], input[type=tel], input [type=date] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px !important;
+  padding: 12px 15px;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+input[type=radio] {
+  background: #ff6633;
+}
+input::placeholder {
+  color: #ddd;
+}
+
+.sj_container header {
+  padding: 18px 0 13px;
+  position: relative;
+}
+.sj_container header .sj_back {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+.sj_container header .sj_back img {
+  width: 15px;
+}
+
+.sj_container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  height: 100vh;
+  position: relative;
+}
+
+.sj_title {
+  font-size: 25px;
+  font-family: "Hi Melody";
+  text-align: center;
+}
+
+.sj_btn {
+  width: 100%;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #ff6633;
+  color: #fff;
+  margin-top: 50px;
+  border: 2px solid transparent;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.sj_btn:hover {
+  border: 2px solid #ff6633;
+  background-color: #fff;
+  color: #ff6633;
+}
+
+.link_txt {
+  display: inline-block;
+  font-size: 14px;
+  color: #424242;
+  margin-top: 10px;
+}
+.link_txt:hover {
+  text-decoration: underline;
+}
+
+.con_txt {
+  font-size: 14px;
+}
+
+.container.login {
+  padding: 0;
+}
+.container.login .sj_container {
+  background-color: #f3cb27;
+}
+.container.login .sj_container .sec1 {
+  padding: 100px 0 56px;
+}
+.container.login .sj_container .sec1 .log_img {
+  text-align: center;
+}
+.container.login .sj_container .sec1 .sj_title {
+  font-size: 38px;
+}
+.container.login .sj_container .sec2 {
+  background-color: #fff;
+  padding: 50px 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.container.login .sj_container .sec2 form .login_error_wrap {
+  padding: 20px 0;
+  color: #ff0000;
+}
+.container.login .sj_container .sec2 form .sj_btn {
+  margin-bottom: 15px;
+}
+
+.container.join {
+  height: 100vh;
+  overflow: scroll;
+}
+.container.join .sj_con {
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.container.join input[type=text], .container.join input[type=email], .container.join input[type=password], .container.join input[type=tel], .container.join input[type=date] {
+  padding: 12px 0;
+}
+.container.join input[type=radio] {
+  margin-top: 15px;
+  margin-right: 5px;
+}
+.container.join .sj_title {
+  margin-bottom: 0;
+}
+.container.join .error_message {
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+.container.mem_find .sj_con .tab_wrap {
+  display: flex;
+  width: 100%;
+  list-style: none;
+}
+.container.mem_find .sj_con .tab_wrap .tab_btn {
+  display: inline-block;
+  width: 50%;
+  padding: 10px 15px;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+}
+.container.mem_find .sj_con .tab_wrap .tab_btn.on {
+  color: #ff6633;
+  border-color: #ff6633;
+}
+.container.mem_find .sj_con .tab_con {
+  display: none;
+}
+.container.mem_find .sj_con .tab_con.active {
+  display: block;
+}

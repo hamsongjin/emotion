@@ -1,0 +1,189 @@
+@font-face {
+  font-family: "Hi Melody";
+  src: url("https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap");
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400&display=swap");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Noto Sans KR";
+  src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap");
+  font-weight: 900;
+}
+html, body {
+  font-family: "Noto Sans KR";
+  color: #424242;
+}
+
+body {
+  height: 100vh;
+}
+
+.sj_container p {
+  margin-bottom: 0;
+}
+
+a {
+  color: #424242 !important;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #424242 !important;
+}
+
+a:active {
+  color: #424242 !important;
+  text-decoration: none !important;
+}
+
+input[type=text], input[type=email], input[type=password], input[type=tel], input[type=date] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px !important;
+  padding: 12px 15px;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+input[type=radio] {
+  background: #ff6633;
+}
+
+.sj_container header {
+  padding: 18px 0 13px;
+  position: relative;
+}
+
+.sj_container header .sj_back {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+.sj_container header .sj_back img {
+  width: 15px;
+}
+
+input::placeholder {
+  color: #ddd;
+}
+
+.sj_container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.sj_title {
+  font-size: 25px;
+  font-family: "Hi Melody";
+  text-align: center;
+}
+
+.sj_btn {
+  width: 100%;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #ff6633;
+  color: #fff;
+  margin-top: 50px;
+  border: 2px solid transparent;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+.sj_btn:hover {
+  border: 2px solid #ff6633;
+  background-color: #fff;
+  color: #ff6633;
+}
+
+.link_txt {
+  display: inline-block;
+  font-size: 14px;
+  color: #424242;
+  margin-top: 10px;
+}
+
+.link_txt:hover {
+  text-decoration: underline;
+}
+
+.con_txt {
+  font-size: 14px;
+}
+
+.sj_container header .sj_set {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+
+.sj_container header .sj_set img {
+  width: 20px;
+}
+
+.sj_con .sec1 {
+  padding: 28px 0px;
+  background-color: #f3cb27;
+  color: #fff;
+}
+
+.sj_con .sj_name {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.sj_con .sj_email {
+  font-size: 18px;
+}
+
+.sj_con .sec2 table {
+  width: 100%;
+  border-spacing: 0;
+  font-size: 18px;
+}
+
+.sj_con .sec2 table tr th, .sj_con .sec2 table tr td {
+  padding: 20px 0;
+}
+
+.sj_con .sec2 table tr th {
+  font-weight: normal;
+}
+
+input[type=text], input[type=email], input[type=password], input[type=tel], input[type=date] {
+  text-align: right;
+  border: 0;
+  margin: 0 !important;
+  padding: 0;
+}
+
+.sj_leave {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}

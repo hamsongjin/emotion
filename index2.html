@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>감정, 보관소</title>
+
+    <link rel="stylesheet" href="./css/dist/common.css">
+    <link rel="stylesheet" href="./css/dist/index2.css">
+   
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+   
+    
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js"></script>
+
+    <!-- xeicon -->
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+</head>
+<body>
+    <div class="sj_main_menu_bg">
+        <div class="sj_main_menu">
+            <div class="close_btn">
+                <img src="./img/icon/수정됨_cross.png" alt="">
+            </div>
+            <div class="sj_profile_wrap">
+                <div class="sj_profile">
+                    <img src="./img/icon/user.png" alt="">
+                </div>
+            </div>
+            <p class="sj_name">sjham</p>
+            <a href="/info.html"><p id="sj_info" class="sj_txt"><img src="./img/icon/user.png" alt="">내 정보</p></a>
+            
+            <p id="sj_logout" class="sj_txt"><img src="./img/icon/sign-out.png" alt="">로그아웃</p>
+        </div>
+        
+    </div>
+    <div class="container">
+        <div class="sj_container index">
+            <header>
+                <div id="sj_menu" class="sj_menu"><img src="./img/icon/menu.png" alt=""></div>
+                <p class="sj_title">감정, 보관소</p>
+            </header>
+            
+            <div class="sj_con">
+                <div class="d-flex justify-content-between">
+                    <p class="sj_title">Calendar</p>
+                    <div>
+                        <button class="sj_btn" type="button" onlick="skinType();">week</button>
+                        <button class="sj_btn" type="button" onclick="goToday()">today</button>
+                    </div>
+                </div>
+                
+                <section id="sj_week" class="sj_week type_month">
+                    <div id="view_calendar" class="">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p id="sjDate" class="sj_date"></p>
+                            <div class="nav">
+                                <button class="nav_prev" onclick="prevMonth();">
+                                    <i class="xi-angle-left"></i>
+                                </button>
+                                <button class="nav_next" onclick="nextMonth();">
+                                    <i class="xi-angle-right"></i>
+                                </button>
+                            </div>
+                        </div>
+    
+                        <div class="days">
+                            <div class="day">SUN</div>
+                            <div class="day">MON</div>
+                            <div class="day">TUE</div>
+                            <div class="day">WEN</div>
+                            <div class="day">THU</div>
+                            <div class="day">FRI</div>
+                            <div class="day">SAT</div>
+                        </div>
+    
+                        <div class="dates skin2">
+    
+                        </div>
+                    </div>
+                    
+                    <div class="view_popup d-none">
+                        <select name="" id="go_year">
+                            <option value=""></option>
+                        </select>
+                        <div class="go_month">
+                            <div onclick="goMonth();">1월</div>
+                            <div onclick="goMonth();">2월</div>
+                            <div onclick="goMonth();">3월</div>
+                            <div onclick="goMonth();">4월</div>
+                            <div onclick="goMonth();">5월</div>
+                            <div onclick="goMonth();">6월</div>
+                            <div onclick="goMonth();">7월</div>
+                            <div onclick="goMonth();">8월</div>
+                            <div onclick="goMonth();">9월</div>
+                            <div onclick="goMonth();">10월</div>
+                            <div onclick="goMonth();">11월</div>
+                            <div onclick="goMonth();">12월</div>
+                        </div>
+                    </div>
+                    
+                </section>
+
+                
+                
+                <section id="sj_record" class="sj_record">
+                    <div class="menu_dots"><img src="./img/icon/menu_dots_b.png" alt=""></div>
+                    <p class="sj_date">2022.03.22</p>
+                    <p class="sj_title">감정날씨</p>
+                    <div class="record_con_wrap">
+                        <img src="" alt="">
+                        <input type="textarea" placeholder="오늘의 감정날씨를 기록해보세요." readonly>
+                    </div>
+                </section>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/common.js"></script>
+    <!-- <script src="./js/index.js"></script> -->
+    
+    <script>
+        $(document).ready(function(){
+           
+            
+            
+        });
+        let date = new Date();
+
+        const renderCalendar = () => {
+
+            // today date
+            const viewYear = date.getFullYear();
+            const viewMonth = date.getMonth();
+            const viewDate = date.getDate();
+
+            let todayDate = `${viewYear}년 ${viewMonth + 1}월`;
+            $('#sjDate').html(todayDate);
+            // year-month 채우기
+          
+
+            // 지난달 마지막 Date, 이번달 마지막 Date
+            const prevLast = new Date(viewYear, viewMonth, 0);
+            const thisLast = new Date(viewYear, viewMonth +1, 0);
+
+            const PLDate = prevLast.getDate();
+            const PLDay = prevLast.getDay();
+
+            const TLDate = thisLast.getDate();
+            const TLDay = thisLast.getDay();
+
+            // Dates 기본 배열들
+            const prevDates = [];
+            const thisDates = [...Array(TLDate + 1).keys()].slice(1);
+            const nextDates = [];
+
+            // prevDatas 계산
+            if(PLDay !== 6) {
+                for(let i=0; i<PLDay + 1; i++) {
+                    prevDates.unshift(PLDate - i);
+                }
+                
+            }
+
+            // nextDates 계산
+            for(let i=1; i<7 - TLDay; i++) {
+                nextDates.push(i);
+            }
+            
+            // Dates 정리
+            const dates = prevDates.concat(thisDates, nextDates);
+            const firstDateIndex = dates.indexOf(1);
+            const lastDateIndex = dates.lastIndexOf(TLDate);
+
+            dates.forEach((date, i)=> {
+                const condition = i >= firstDateIndex && i < lastDateIndex + 1 ? 'this' : 'other';
+
+                dates[i] = `<div class ="date" dYear = "${viewYear}" dMonth="${viewMonth+1}" dDay="${date}"><span class="${condition}">${date}</span></div>`;
+            })
+            
+            dates.join('');
+            // console.log("dates ??", dates);
+            $('.dates').html(dates);
+
+            // 오늘 날짜 그리기
+            const today = new Date();
+            if(viewMonth === today.getMonth() && viewYear === today.getFullYear()) {
+                
+                for(let date of document.querySelectorAll('.this')) {
+                    // console.log("date> ??", date);
+                    if(+date.innerHTML === today.getDate()) {
+                        date.classList.add('today');
+                        break;
+                    }
+                }
+            }
+
+        }
+        renderCalendar();
+        // today btn {
+        const goToday = () => {
+            date = new Date();
+            renderCalendar();
+            
+        }
+
+        // nav prev btn
+        const prevMonth = () => {
+            // console.log("prev");
+            date.setDate(1);
+            date.setMonth(date.getMonth() - 1 );
+            renderCalendar();
+        }
+
+        // nav next btn
+        const nextMonth = () => {
+            // console.log("next");
+            date.setDate(1);
+            date.setMonth(date.getMonth + 1);
+            renderCalendar();
+        }
+
+    </script>
+</body>
